@@ -1,0 +1,101 @@
+/* Additional css for Metrolike */
+
+.headerwrap {
+	background-color:#4d4d4d;
+}
+
+.navwrap {
+	background-color:#e60685;
+	color:#ffffff;
+}
+
+.navwrap a {
+	color:#ffffff;
+	font-weight:bold;
+}
+
+.navwrap a:hover {
+	color:#333333;
+	text-decoration:none;
+}
+
+.navwrap .dropdown-contents, .navwrap .dropdown-contents a {
+	color:#4d4d4d;
+	font-weight:normal;
+}
+
+.navwrap .dropdown-contents a:hover {
+	color:#e60685;
+}
+
+.ml-advsearch {
+	float:right;
+	color:#bbbbbb;
+	text-transform:uppercase;
+}
+
+.ml-advsearch:hover {
+	color:#e60685;
+	text-decoration:none;
+}
+
+.pagination .button, .pagination .arrow .icon {
+	font-weight:normal;
+	font-size:.8em;
+}
+
+.pagination li.active span {
+	font-weight:bold;
+	font-size:.8em;
+}
+
+.forums dl.row-item {
+	background-position: 10px 20%;		/* Position of folder icon */
+}
+
+.topic-title {
+	font-weight:bold;
+}
+
+a:hover .icon.icon-gray {
+	color:#e60685;
+}
+
+.online {
+	border-right:4px solid #94e000;
+}
+
+.offline {
+	border-right:4px solid #cccccc;
+}
+
+.memberlist th {
+	background:#f9f9f9;
+	color:#333333;
+	border-bottom:1px solid #cccccc;
+}
+
+.memberlist th a {
+	color:#333333;
+	font-weight:bold;
+}
+
+.memberlist th a:hover {
+	color:#e60685;
+	text-decoration:underline;
+}
+
+table.table1.memberlist tbody td {
+	background:#f9f9f9;
+	color:#333333;
+	border-bottom:1px solid #cccccc;
+	padding:10px 5px;
+}
+
+/* Responsive... */
+
+@media (max-width: 700px) {
+	.navwrap {
+		padding:0 5px;
+	}
+}

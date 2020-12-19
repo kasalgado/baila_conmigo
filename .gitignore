@@ -1,0 +1,20 @@
+# Cache files
+/cache/
+
+# Configuration file
+# This may be unpopular to include, but it will prevent accidental db information commits.
+/config.php
+
+# Attachments
+/!files/
+/files/*
+/!files/index.htm
+
+# Uploaded avatars
+/!images/avatars/upload/
+/images/avatars/upload/*
+/!images/avatars/upload/index.htm
+
+# My stuff
+/vendor/
+/.idea/
