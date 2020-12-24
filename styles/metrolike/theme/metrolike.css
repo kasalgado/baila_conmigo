@@ -1,6 +1,7 @@
 /* Additional css for Metrolike */
 
 .headerwrap {
+	background-image: url("./images/bg_overall_header.jpg") !important;
 	background-color:#4d4d4d;
 }
 

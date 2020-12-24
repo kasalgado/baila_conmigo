@@ -864,3 +864,26 @@ table.fixed-width-table {
 #memberlist tr.inactive, #team tr.inactive {
 	font-style: italic;
 }
+
+/* NEW STYLES */
+.box-flowchart {
+	margin: 20px auto;
+	position: relative;
+}
+
+.flowchart-responsive-content {
+	font-size: 1.1em;
+	position: absolute;
+	top: 13%;
+	width: 14%;
+}
+
+.flowchart-img {
+	display: block;
+	max-width: 100%;
+}
+
+.flowchart-content-one { left: 9%; }
+.flowchart-content-two { left: 33%; }
+.flowchart-content-three { left: 57%; }
+.flowchart-content-four { left: 81%; }

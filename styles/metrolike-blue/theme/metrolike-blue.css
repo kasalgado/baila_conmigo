@@ -2,25 +2,25 @@
 ---------------------------------------- */
 
 a, .forumbg .header a:hover, .forabg .header a:hover, th a:hover, .postlink, .postlink:visited, .icon.icon-blue, a:hover .icon.icon-blue, .jumpbox-sub-link, dd.profile-warnings, .tabs .tab > a:hover, .tabs .activetab > a, .tabs .activetab > a:hover, .navigation a:hover, .navigation .active-subsection a:hover, .navwrap .dropdown-contents a:hover, .ml-advsearch:hover, a:hover .icon.icon-gray, .memberlist th a:hover
-{color:#0088ff;}
+{color:#336699;}
 
 .pagination li.active span, .pagination li a:hover, .pagination li a:hover .icon, .pagination .dropdown-visible a.dropdown-trigger, .nojs .pagination .dropdown-container:hover a.dropdown-trigger, input.button1:focus, input.button2:focus, input.button3:focus
-{background:#0088ff;}
+{background:#336699;}
 
 .jumpbox-cat-link, .jumpbox-cat-link:hover, .pollbar1, .pollbar2, .pollbar3, .pollbar4, .pollbar5, .button:hover, .button:focus, a.button1:hover, input.button1:hover, a.button2:hover, input.button2:hover, input.button3:hover, .navwrap
-{background-color:#0088ff;}
+{background-color:#336699;}
 
 .pagination li.active span, .pagination li a:hover, .pagination li a:hover .icon, .pagination .dropdown-visible a.dropdown-trigger, .nojs .pagination .dropdown-container:hover a.dropdown-trigger, .pmlist li.pm_marked_colour, .pm_marked_colour, .inputbox:hover, .inputbox:focus
-{border-color:#0088ff;}
+{border-color:#336699;}
 
 .jumpbox-cat-link, .jumpbox-cat-link:hover
-{border-top-color:#0088ff;}
+{border-top-color:#336699;}
 
 .postlink, .pollbar1, .pollbar2, .pollbar3, .pollbar4, .pollbar5
-{border-bottom-color:#0088ff;}
+{border-bottom-color:#336699;}
 
 .navigation a:hover, .navigation .active-subsection a, .navigation .active-subsection a:hover
-{border-left-color:#0088ff;}
+{border-left-color:#336699;}
 
 
 /* Highlight colour

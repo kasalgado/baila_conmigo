@@ -150,7 +150,7 @@ a:hover	{ text-decoration: underline; }
 }
 
 .page-body {
-	margin: 20px 0 30px 0;
+	margin: 6px 0 30px 0;
 	clear: both;
 }
 
@@ -165,7 +165,7 @@ a:hover	{ text-decoration: underline; }
 .logo {
 	float: left;
 	width: auto;
-	padding: 10px 13px 0 0;
+	padding: 0;
 }
 
 .logo:hover {
@@ -176,7 +176,7 @@ a:hover	{ text-decoration: underline; }
 	background-repeat: no-repeat;
 	display: inline-block;
 	width: 149px;
-	height: 52px;
+	height: 90px;
 }
 
 /* Site description and logo */
@@ -192,7 +192,7 @@ a:hover	{ text-decoration: underline; }
 /* Round cornered boxes and backgrounds
 ---------------------------------------- */
 .headerbar {
-	padding: 10px 0;
+	padding: 3px 0;
 }
 
 .forabg {

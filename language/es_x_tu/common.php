@@ -282,6 +282,11 @@ $lang = array_merge($lang, array(
 	'FILESYSTEM_CANNOT_MIRROR_DIRECTORY'	=> 'Incapaz de reflejar el directorio',
 	'FILESYSTEM_CANNOT_RENAME_FILE'	=> 'Incapaz de renombrar un archivo del sistema',
 	'FILESYSTEM_CANNOT_TOUCH_FILES'	=> 'Incapaz de crear el archivo o cambiar las marcas de tiempo del archivo',
+
+    'FLOWCHART_CONTENT_ONE' => 'Regístrate',
+    'FLOWCHART_CONTENT_TWO' => 'Completa tu perfil',
+    'FLOWCHART_CONTENT_THREE' => 'Busca tu pareja',
+    'FLOWCHART_CONTENT_FOUR' => 'Vamos a bailar',
 	
 	'FTP_FSOCK_HOST'	=> 'Servidor FTP Fsock',
 	'FTP_FSOCK_HOST_EXPLAIN'	=> 'Servidor FTP Fsock empleado para conectar a tu sitio',
@@ -621,7 +626,7 @@ $lang = array_merge($lang, array(
     	'POST_UNAPPROVED_ACTION'	=> 'Mensaje esperando aprobación:',
     	'POST_UNAPPROVED'		=> 'Este mensaje no ha sido aprobado.',
 	'POST_UNAPPROVED_EXPLAIN'	=> 'Este mensaje no es visible para otros usuarios hasta que haya sido aprobado por un Moderador.',
-	'POWERED_BY'			=> 'Desarrollado por %s',
+	'POWERED_BY'			=> "Desarrollado por <a href='http://kasalgado.de' target='_blank'>KASalgado</a> en %s",
 
 	'QUOTE'					=> 'Citar',
 

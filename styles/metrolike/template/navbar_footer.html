@@ -31,9 +31,6 @@
 				</li>
 			<!-- ENDIF -->
 
-			<!-- EVENT overall_footer_timezone_before -->
-			<li class="rightside">{S_TIMEZONE}</li>
-			<!-- EVENT overall_footer_timezone_after -->
 			<!-- IF not S_IS_BOT -->
 				<li class="rightside">
 					<a href="{U_DELETE_COOKIES}" data-ajax="true" data-refresh="true" role="menuitem">
@@ -64,6 +61,11 @@
 					</a>
 				</li>
 			<!-- ENDIF -->
+			<li class="rightside" data-last-responsive="true">
+				<a href="{U_FAQ}" rel="help" title="{L_FAQ_EXPLAIN}" role="menuitem">
+					<i class="icon fa-question-circle fa-fw" aria-hidden="true"></i><span>{L_FAQ}</span>
+				</a>
+			</li>
 		</ul>
 
 		</div>
