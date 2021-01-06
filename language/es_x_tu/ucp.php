@@ -666,4 +666,16 @@ $lang = array_merge($lang, array(
 	'NO_MEMBER'		=> 'Sin usuarios',
 	'NO_PENDING'	=> 'Sin membresías pendientes',
 	'NO_NONMEMBER'	=> 'Sin grupo de no-usuarios',
+
+    'SEARCH_PROFILE_INFO_NOTICE'    => 'Puedes realizar tu búsqueda con diferentes criterios para alcanzar un resultado más preciso.',
+    'UCP_KEYWORDS'                  => 'Palabras clave',
+    'UCP_AGE_BETWEEN'               => 'Edad entre',
+    'UCP_HEIGHT_BETWEEN'            => 'Estatura entre',
+    'UCP_SEARCH'                    => 'Buscar',
+    'UCP_SEARCH_FORUM'              => 'Buscar en foros',
+    'UCP_SEARCH_FORUM_INFO'         => 'Buscar en foros por criterios',
+    'UCP_SEARCH_DANCE_PREFERENCES'  => 'PREFERENCIAS EN EL BAILE',
+    'UCP_SEARCH_PROFILE'            => 'Buscar en perfil',
+    'UCP_SEARCH_PROFILE_INFO'       => 'Buscar pareja por criterios',
+    'UCP_SEARCH_SOCIAL_NETWORKS'    => 'REDES SOCIALES',
 ));

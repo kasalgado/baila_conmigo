@@ -1,0 +1,104 @@
+<!-- INCLUDE overall_header.html -->
+
+<h2 class="searchresults-title">{SEARCH_MATCHES}</h2>
+<p class="advanced-search-link">
+    <a class="arrow-{S_CONTENT_FLOW_BEGIN}" href="{UCP_SEARCH}" title="{L_SEARCH_ADV}">{L_GO_TO_SEARCH_ADV}</a>
+</p>
+
+<!-- EVENT memberlist_view_content_prepend -->
+
+<!-- BEGIN searchresults -->
+<div class="panel bg1<!-- IF searchresults.S_ONLINE --> online<!-- ENDIF -->">
+    <div class="inner">
+        <!-- IF searchresults.AVATAR_IMG -->
+        <dl class="left-box left-profile-details">
+            <dt class="profile-avatar">{searchresults.AVATAR_IMG}</dt>
+            <!-- IF searchresults.RANK_TITLE --><dd style="text-align: center;">{searchresults.RANK_TITLE}</dd><!-- ENDIF -->
+            <!-- IF searchresults.RANK_IMG --><dd style="text-align: center;">{searchresults.RANK_IMG}</dd><!-- ENDIF -->
+        </dl>
+        <!-- ENDIF -->
+
+        <dl class="left-box details profile-details right-profile-details">
+            <dt>{L_USERNAME}{L_COLON}</dt>
+            <dd>
+                <!-- IF searchresults.USER_COLOR --><span style="color: {searchresults.USER_COLOR}; font-weight: bold;"><!-- ELSE --><span><!-- ENDIF -->{searchresults.USERNAME}</span>
+                <!-- IF searchresults.U_EDIT_SELF --> [ <a href="{searchresults.U_EDIT_SELF}">{L_EDIT_PROFILE}</a> ]<!-- ENDIF -->
+                <!-- IF searchresults.U_USER_ADMIN --> [ <a href="{searchresults.U_USER_ADMIN}">{L_USER_ADMIN}</a> ]<!-- ENDIF -->
+                <!-- IF searchresults.U_USER_BAN --> [ <a href="{searchresults.U_USER_BAN}">{L_USER_BAN}</a> ]<!-- ENDIF -->
+                <!-- IF searchresults.U_SWITCH_PERMISSIONS --> [ <a href="{searchresults.U_SWITCH_PERMISSIONS}">{L_USE_PERMISSIONS}</a> ]<!-- ENDIF -->
+            </dd>
+            <!-- IF not searchresults.AVATAR_IMG -->
+            <!-- IF searchresults.RANK_TITLE --><dt>{L_RANK}{L_COLON}</dt> <dd>{searchresults.RANK_TITLE}</dd><!-- ENDIF -->
+            <!-- IF searchresults.RANK_IMG --><dt><!-- IF searchresults.RANK_TITLE -->&nbsp;<!-- ELSE -->{L_RANK}{L_COLON}<!-- ENDIF --></dt> <dd>{searchresults.RANK_IMG}</dd><!-- ENDIF -->
+            <!-- ENDIF -->
+            <!-- IF searchresults.S_USER_INACTIVE --><dt>{L_USER_IS_INACTIVE}{L_COLON}</dt> <dd>{searchresults.USER_INACTIVE_REASON}</dd><!-- ENDIF -->
+            <!-- IF searchresults.AGE !== '' --><dt>{L_AGE}{L_COLON}</dt> <dd>{searchresults.AGE}</dd><!-- ENDIF -->
+
+            <!-- BEGIN custom_fields -->
+            <!-- IF not custom_fields.S_PROFILE_CONTACT -->
+            <dt>{custom_fields.PROFILE_FIELD_NAME}{L_COLON}</dt> <dd>{custom_fields.PROFILE_FIELD_VALUE}</dd>
+            <!-- ENDIF -->
+            <!-- END custom_fields -->
+
+            <!-- IF S_USER_LOGGED_IN and searchresults.S_ZEBRA -->
+            <!-- IF searchresults.U_REMOVE_FRIEND -->
+            <dt>&nbsp;</dt> <dd class="zebra"><a href="{searchresults.U_REMOVE_FRIEND}" data-ajax="zebra"><strong>{L_REMOVE_FRIEND}</strong></a></dd>
+            <!-- ELSE -->
+            <!-- IF searchresults.U_ADD_FRIEND -->
+            <dt>&nbsp;</dt> <dd class="zebra"><a href="{searchresults.U_ADD_FRIEND}" data-ajax="zebra"><strong>{L_ADD_FRIEND}</strong></a></dd>
+            <!-- ENDIF -->
+            <!-- ENDIF -->
+            <!-- ENDIF -->
+        </dl>
+    </div>
+</div>
+
+<!-- EVENT memberlist_view_contact_before -->
+<div class="panel bg2">
+    <div class="inner">
+
+        <div class="column1">
+            <h3>{searchresults.L_CONTACT_USER}</h3>
+
+            <dl class="details">
+                <!-- IF searchresults.U_EMAIL --><dt>{L_EMAIL_ADDRESS}{L_COLON}</dt> <dd><a href="{searchresults.U_EMAIL}">{L_SEND_EMAIL_USER}</a></dd><!-- ENDIF -->
+                <!-- IF searchresults.U_PM --><dt>{L_PM}{L_COLON}</dt> <dd><a href="{searchresults.U_PM}">{L_SEND_PRIVATE_MESSAGE}</a></dd><!-- ENDIF -->
+
+                <!-- BEGIN custom_fields -->
+                <!-- IF custom_fields.S_PROFILE_CONTACT -->
+                <dt>{custom_fields.PROFILE_FIELD_NAME}{L_COLON}</dt>
+                <!-- IF custom_fields.PROFILE_FIELD_CONTACT -->
+                <dd><a href="{custom_fields.PROFILE_FIELD_CONTACT}">{custom_fields.PROFILE_FIELD_DESC}</a></dd>
+                <!-- ELSE -->
+                <dd>{custom_fields.PROFILE_FIELD_VALUE}</dd>
+                <!-- ENDIF -->
+                <!-- ENDIF -->
+                <!-- END custom_fields -->
+            </dl>
+        </div>
+
+        <div class="column2">
+            <h3>{L_USER_FORUM}</h3>
+            <dl class="details">
+                <!-- EVENT memberlist_view_user_statistics_before -->
+                <dt>{L_JOINED}{L_COLON}</dt> <dd>{searchresults.JOINED}</dd>
+                <dt>{L_LAST_ACTIVE}{L_COLON}</dt> <dd>{searchresults.LAST_ACTIVE}</dd>
+                <!-- IF searchresults.S_WARNINGS -->
+                <dt>{L_WARNINGS}{L_COLON} </dt>
+                <dd><strong>{searchresults.WARNINGS}</strong><!-- IF searchresults.U_NOTES or searchresults.U_WARN --> [ <!-- IF searchresults.U_NOTES --><a href="{searchresults.U_NOTES}">{L_VIEW_NOTES}</a><!-- ENDIF --> <!-- IF searchresults.U_WARN --><!-- IF searchresults.U_NOTES --> | <!-- ENDIF --><a href="{searchresults.U_WARN}">{L_WARN_USER}</a><!-- ENDIF --> ]<!-- ENDIF --></dd>
+                <!-- ENDIF -->
+                <!-- EVENT memberlist_view_user_statistics_after -->
+            </dl>
+        </div>
+
+    </div>
+</div>
+<!-- END searchresults -->
+
+<!-- END template_user -->
+
+<!-- EVENT memberlist_view_contact_after -->
+
+<!-- EVENT memberlist_view_content_append -->
+
+<!-- INCLUDE overall_footer.html -->

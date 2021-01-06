@@ -1,0 +1,79 @@
+<!-- INCLUDE ucp_header.html -->
+
+<form id="search_profile" method="post" action="{S_UCP_ACTION}"{S_FORM_ENCTYPE}>
+    <h2>{L_UCP_SEARCH_PROFILE}</h2>
+    <div class="panel">
+        <div class="inner">
+            <p>{L_SEARCH_PROFILE_INFO_NOTICE}</p>
+
+            <fieldset>
+                <!-- IF ERROR --><p class="error">{ERROR}</p><!-- ENDIF -->
+                <dl>
+                    <dt><label for="keywords">{L_UCP_KEYWORDS}{L_COLON}</label></dt>
+                    <dd><input type="text" name="pf_user_about" id="pf_user_about" maxlength="255" value="" class="inputbox" /></dd>
+                </dl>
+                <dl>
+                    <dt><label for="keywords">{L_UCP_AGE_BETWEEN}{L_COLON}</label></dt>
+                    <dd>
+                        <select name="pf_user_between_start" id="pf_user_between_start">
+                            <!-- BEGIN age_range -->
+                            <option value="{age_range.option}">{age_range.option}</option>
+                            <!-- END age_range -->
+                        </select>&nbsp;-&nbsp;
+                        <select name="pf_user_between_end" id="pf_user_between_end">
+                            <!-- BEGIN age_range -->
+                            <!-- IF age_range.option == 80 -->
+                            <option value="{age_range.option}" selected="selected">{age_range.option}</option>
+                            <!-- ELSE -->
+                            <option value="{age_range.option}">{age_range.option}</option>
+                            <!-- ENDIF -->
+                            <!-- END age_range -->
+                        </select>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt><label for="keywords">{L_UCP_HEIGHT_BETWEEN}{L_COLON}</label></dt>
+                    <dd>
+                        <select name="pf_user_height_start" id="pf_user_height_start">
+                            <!-- BEGIN height_range -->
+                            <option value="{height_range.option}">{height_range.option}</option>
+                            <!-- END height_range -->
+                        </select>&nbsp;-&nbsp;
+                        <select name="pf_user_height_end" id="pf_user_height_end">
+                            <!-- BEGIN height_range -->
+                            <!-- IF height_range.option == 180 -->
+                            <option value="{height_range.option}" selected="selected">{height_range.option}</option>
+                            <!-- ELSE -->
+                            <option value="{height_range.option}">{height_range.option}</option>
+                            <!-- ENDIF -->
+                            <!-- END height_range -->
+                        </select>
+                    </dd>
+                </dl>
+
+                <!-- BEGIN profile_fields -->
+                <!-- IF profile_fields.FIELD_ID != 'pf_user_about' && profile_fields.FIELD_ID != 'pf_phpbb_website' && profile_fields.FIELD_ID != 'pf_phpbb_facebook' && profile_fields.FIELD_ID != 'pf_phpbb_twitter' && profile_fields.FIELD_ID != 'pf_user_height' -->
+                <dl>
+                    <dt><label<!-- IF profile_fields.FIELD_ID --> for="{profile_fields.FIELD_ID}"<!-- ENDIF -->>{profile_fields.LANG_NAME}{L_COLON}<!-- IF profile_fields.S_REQUIRED --> *<!-- ENDIF --></label>
+                        <!-- IF profile_fields.LANG_EXPLAIN --><br /><span>{profile_fields.LANG_EXPLAIN}</span><!-- ENDIF --></dt>
+                    <!-- IF profile_fields.ERROR --><dd class="error">{profile_fields.ERROR}</dd><!-- ENDIF -->
+                    <dd>{profile_fields.FIELD}</dd>
+                </dl>
+                <!-- IF profile_fields.FIELD_ID == 'pf_user_photo' -->
+                <div style="margin-top: 20px; font-weight: bold; font-size: 1.1em;">{L_UCP_SEARCH_DANCE_PREFERENCES}</div>
+                <hr>
+                <!-- ENDIF -->
+                <!-- ENDIF -->
+                <!-- END profile_fields -->
+            </fieldset>
+        </div>
+    </div>
+
+    <fieldset class="submit-buttons">
+        {S_HIDDEN_FIELDS}<input type="reset" value="{L_RESET}" name="reset" class="button2" />&nbsp;
+        <input type="submit" name="submit" value="{L_SUBMIT}" class="button1" />
+        {S_FORM_TOKEN}
+    </fieldset>
+</form>
+
+<!-- INCLUDE ucp_footer.html -->

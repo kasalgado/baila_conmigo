@@ -709,10 +709,6 @@ table.info tbody th {
 	max-width: 100%;
 }
 
-.left-box.profile-details {
-	width: 80%;
-}
-
 .right-box {
 	float: right;
 	width: auto;

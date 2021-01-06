@@ -149,6 +149,10 @@ class manager
 				}
 			break;
 
+            case 'search':
+                $sql_where = '';
+                break;
+
 			default:
 				trigger_error('NO_MODE', E_USER_ERROR);
 			break;
@@ -284,6 +288,9 @@ class manager
 		{
 			return;
 		}
+
+        /** Quick fix for inserting pf_user_photo with default value */
+        $cp_data['pf_user_photo'] = 0;
 
 		$sql = 'UPDATE ' . $this->fields_data_table . '
 			SET ' . $this->db->sql_build_array('UPDATE', $cp_data) . '
