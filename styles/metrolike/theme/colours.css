@@ -571,6 +571,7 @@ Colours and backgrounds for buttons.css
 ---------------------------------------- */
 
 .contact-icon						{ background-image: url("./images/icons_contact.png"); }
+.icon-search-profile				{ background-image: url("./images/icon_search_profile.png"); }
 
 /* Profile & navigation icons */
 .pm-icon							{ background-position: 0 0; }

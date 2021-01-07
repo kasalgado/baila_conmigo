@@ -711,6 +711,7 @@ $lang = array_merge($lang, array(
 	'SEARCH_ACTIVE_TOPICS'	=> 'Temas activos',
 	'SEARCH_FOR'	=> 'Buscar',
 	'SEARCH_FORUM'	=> 'Buscar en este Foro…',
+    'SEARCH_MATCH'  => 'Buscar pareja',
 	'SEARCH_NEW'	=> 'Nuevos mensajes',
 	'SEARCH_POSTS_BY'	=> 'Buscar mensajes por',
 	'SEARCH_SELF'	=> 'Sus mensajes',
