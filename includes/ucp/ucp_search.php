@@ -51,10 +51,16 @@ class ucp_search
                         'pf_user_height_end' => utf8_normalize_nfc(request_var('pf_user_height_end', '', true)),
                     );
                     $photo = utf8_normalize_nfc(request_var('pf_user_photo', '', true));
+
+                    $params = array();
+                    $user_about = utf8_normalize_nfc(request_var('pf_user_about', '', true));
+                    if ($user_about != '') {
+                        $params['pf_user_about'] = $user_about;
+                    }
+
                     $form_fields = array(
                         'pf_user_gender',
                         'pf_user_body',
-                        'pf_user_about',
                         'pf_user_location',
                         'pf_user_salsa',
                         'pf_user_bachata',
@@ -62,10 +68,9 @@ class ucp_search
                         'pf_user_electronica',
                     );
 
-                    $params = array();
                     foreach ($form_fields as $name) {
                         $value = utf8_normalize_nfc(request_var($name, '', true));
-                        if ($name == 'pf_user_about' && $value != '' || $name != 'pf_user_about' && $value != '1') {
+                        if ($value != '1') {
                             $params[$name] = $value;
                         }
                     }
@@ -141,7 +146,6 @@ class ucp_search
 
         $selected_fields = '';
         $conditions = '';
-        $search_age = '';
 
         if (empty($fields)) {
             $selected_fields = '* ';
@@ -154,12 +158,16 @@ class ucp_search
             }
         }
 
+        if ($params && isset($params['pf_user_about'])) {
+            $conditions .= ' AND LOWER(pf_user_about) LIKE LOWER("%' . $params['pf_user_about'] . '%")';
+            unset($params['pf_user_about']);
+        }
+
         if($params) {
             $conditions .= ' AND ';
+
             foreach($params as $param => $value) {
-                $conditions .= $param == 'pf_user_about'
-                    ? $param . ' LIKE "%' . $value . '%"'
-                    : $param . ' = ' . $value;
+                $conditions .= $param . ' = ' . $value;
                 if(next($params) == true) {
                     $conditions .= ' AND ';
                 }

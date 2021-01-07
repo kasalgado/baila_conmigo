@@ -36,15 +36,15 @@
                     <dd>
                         <select name="pf_user_height_start" id="pf_user_height_start">
                             <!-- BEGIN height_range -->
-                            <option value="{height_range.option}">{height_range.option}</option>
+                            <option value="{height_range.index}">{height_range.option}</option>
                             <!-- END height_range -->
                         </select>&nbsp;-&nbsp;
                         <select name="pf_user_height_end" id="pf_user_height_end">
                             <!-- BEGIN height_range -->
                             <!-- IF height_range.option == 180 -->
-                            <option value="{height_range.option}" selected="selected">{height_range.option}</option>
+                            <option value="{height_range.index}" selected="selected">{height_range.option}</option>
                             <!-- ELSE -->
-                            <option value="{height_range.option}">{height_range.option}</option>
+                            <option value="{height_range.index}">{height_range.option}</option>
                             <!-- ENDIF -->
                             <!-- END height_range -->
                         </select>
